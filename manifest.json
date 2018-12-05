@@ -1,31 +1,33 @@
 {
-    "name": "CSDN自动展开全文",
-    "version": "1.0",
+
     "manifest_version": 2,
-    "description": "CSDN阅读全文要求登录，我是拒绝的！",
+    "version": "1.1",
+    "name": "killcsdn",
+    "description": "干掉csdn",
     "icons": {
-        "16": "icon.png",
-		"48": "icon.png",
-		"128": "icon.png"
+         "128": "imgs/icon-128.png",
+         "16": "imgs/icon-16.png"
     },
-    "permissions": [
-        "http://*/*",
-		"https://*/*"
-    ],
-    "browser_action": {
-        "default_icon": "icon.png",
-		"default_title": "CSDN自动展开全文"
-    },
-    "content_scripts": [
+    "content_scripts":[
         {
-            "matches": [
-				"<all_urls>"
-			],
-            "js": [
-                "jquery-1.9.1.min.js",
-                "myscript.js"
-            ],
-			"run_at":"document_start"
+            "matches": ["https://blog.csdn.net/*"],
+            "js":["js/main.js"]
         }
-    ]
+    ],
+    "homepage_url":"https://gitee.com/redsky/killcsdn",
+    "page_action": {
+        "default_icon": {
+            "19": "imgs/icon-19.png",
+            "38": "imgs/icon-38.png"
+        },
+        "default_title": "killcsdn"
+    },
+    "web_accessible_resources": ["js/kill.js"],
+    "permissions":[
+        "https://blog.csdn.net/*","declarativeContent","background"
+    ],
+    "background":{
+        "scripts":["js/background.js"],
+        "persistent" : true
+    }
 }

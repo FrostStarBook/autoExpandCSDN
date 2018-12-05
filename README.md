@@ -12,4 +12,7 @@ CSDN文章不直接显示全文，要点阅读全文，点就算了，居然还�
 ## 更新记录
 2018年12月5日，csdn强制要求加入Adblock白名单
 
+![](https://raw.githubusercontent.com/liushuheng163/autoExpandCSDN/master/doc/1.jpg)
 
+
+本次更新coding:[王的世界](https://github.com/wws19125/killcsdn)
